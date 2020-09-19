@@ -1,0 +1,30 @@
+.singlePost {
+    padding: 30px 20px;
+    margin: 15px 0;
+    background: #81ecec;
+    border-radius: 10px;
+    display: flex;
+}
+
+p {
+    margin: 0
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 5px 0
+}
+
+
+.image {
+    width: 17%;
+    align-self: center;
+}
+
+img {
+    
+    border-radius: 50%;
+}
+
+.postDescription {
+    width: 83%
+}

@@ -1,24 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header/Header';
+import Home from './Components/Home/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Error from './Components/Error/Error';
+import InsidePost from './Components/InsidePost/InsidePost';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <Header/>
+      <Router>
+        <Switch>
+          <Route path="/home">
+            <Home/>
+          </Route>
+          <Route exact path="/">
+            <Home/>
+          </Route>
+          <Route path="/posts/:id">
+            <InsidePost/>
+          </Route>
+          <Route path="*">
+            <Error/>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -1,0 +1,11 @@
+.body {
+    margin-top: 30px
+}
+
+.insideBody {
+    padding: 30px 20px;
+    margin: 15px 0;
+    background: #81ecec;
+    border-radius: 10px;
+    display: flex;
+}
